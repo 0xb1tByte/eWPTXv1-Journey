@@ -1,6 +1,6 @@
 # eWPTXv1-Journey
 
-This repository is intended just for supporting & helping me during my eWPTXv1 journey from [eLearnSecurity](https://www.elearnsecurity.com/course/penetration_testing/)
+This repository is intended just for supporting & helping me during my [eWPTXv1](https://www.elearnsecurity.com/course/web_application_penetration_testing_extreme/) journey from [eLearnSecurity](https://www.elearnsecurity.com/course/penetration_testing/)
 
 
 ## Course content
