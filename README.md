@@ -5,8 +5,8 @@ This repository is intended just for supporting & helping me during my [eWPTXv1]
 
 ## Course content
 
-* [ ] Module 1 : Encoding and Filtering :pushpin:
-* [ ] Module 2 : Evasion Basics
+* [x] Module 1 : Encoding and Filtering 
+* [ ] Module 2 : Evasion Basics :pushpin:
 * [ ] Module 3 : Cross-Site Scripting
 * [ ] Module 4 : XSS - Filter Evasion and WAF Bypassing
 * [ ] Module 5 : Cross-Site Request Forgery 	
