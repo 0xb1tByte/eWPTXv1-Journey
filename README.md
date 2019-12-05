@@ -8,8 +8,8 @@ This repository is intended just for supporting & helping me during my [eWPTXv1]
 * [x] Module 1 : Encoding and Filtering 
 * [x] Module 2 : Evasion Basics 
 * [x] Module 3 : Cross-Site Scripting 
-* [ ] Module 4 : XSS - Filter Evasion and WAF Bypassing :pushpin:
-* [ ] Module 5 : Cross-Site Request Forgery 	
+* [x] Module 4 : XSS - Filter Evasion and WAF Bypassing 
+* [ ] Module 5 : Cross-Site Request Forgery 	:pushpin:
 * [ ] Module 6 : HTML5 
 * [ ] Module 7 : SQL Injection 	
 * [ ] Module 8 : SQLi - Filter evasion and WAF Bypassing 	 
