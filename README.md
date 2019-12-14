@@ -10,8 +10,8 @@ This repository is intended just for supporting & helping me during my [eWPTXv1]
 * [x] Module 3 : Cross-Site Scripting 
 * [x] Module 4 : XSS - Filter Evasion and WAF Bypassing 
 * [x] Module 5 : Cross-Site Request Forgery 	
-* [ ] Module 6 : HTML5 :pushpin:
-* [ ] Module 7 : SQL Injection 	
+* [x] Module 6 : HTML5 
+* [ ] Module 7 : SQL Injection :pushpin:
 * [ ] Module 8 : SQLi - Filter evasion and WAF Bypassing 	 
 * [ ] Module 9 : XML Attacks
 
