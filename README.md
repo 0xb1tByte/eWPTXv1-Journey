@@ -13,5 +13,4 @@ This repository is intended just for supporting & helping me during my [eWPTXv1]
 * [x] Module 6 : HTML5 
 * [x] Module 7 : SQL Injection 
 * [x] Module 8 : SQLi - Filter evasion and WAF Bypassing 
-* [ ] Module 9 : XML Attacks :pushpin:
-
+* [x] Module 9 : XML Attacks 
