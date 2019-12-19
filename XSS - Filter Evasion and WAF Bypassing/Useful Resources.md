@@ -4,7 +4,7 @@
 ### Regular Expression Functions in PHP :
 Note: you might need this part when you're working on bypassing trivial regex filters
 #### Articles : 
-- [ENGLISH : PHP Regex Cheatsheet](https://catswhocode.com/php-regex/)
+- [ENGLISH : Regex Cheatsheet](https://www.cheatography.com/davechild/cheat-sheets/regular-expressions/pdf/)
 - [ENGLISH : preg_replace](https://www.geeksforgeeks.org/php-preg_replace-function/)
 
 #### Video : 
