@@ -9,3 +9,6 @@
 - [ARABIC : php regular expressions(1) شرح الأستخدام العملى ل](https://youtu.be/jMpi0nCgZuE)
 - [ARABIC : php regular expression تطبيقات عملية لاستخدام التعابير القياسية](https://youtu.be/eXQ_kP2Qakg)
 
+#### Tools : 
+- [PHP Live Regex](https://www.phpliveregex.com/)
+
