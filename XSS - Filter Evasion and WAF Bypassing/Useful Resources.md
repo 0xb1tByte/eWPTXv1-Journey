@@ -2,6 +2,7 @@
 - [The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws](https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470)
 
 ### Regular Expression Functions in PHP :
+Note: you might need this part when you're working on bypassing trivial regex filters
 #### Articles : 
 - [ENGLISH : PHP Regex Cheatsheet](https://catswhocode.com/php-regex/)
 - [ENGLISH : preg_replace](https://www.geeksforgeeks.org/php-preg_replace-function/)
