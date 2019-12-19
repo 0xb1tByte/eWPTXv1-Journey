@@ -1,7 +1,7 @@
 ### Books :
 - [The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws](https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470)
 
-### Regular Expression Function in PHP :
+### Regular Expression Functions in PHP :
 #### Articles : 
 - [ENGLISH : preg_replace](https://www.geeksforgeeks.org/php-preg_replace-function/)
 
