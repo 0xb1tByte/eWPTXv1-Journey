@@ -3,6 +3,7 @@
 
 ### Regular Expression Functions in PHP :
 #### Articles : 
+- [ENGLISH : PHP Regex Cheatsheet](https://catswhocode.com/php-regex/)
 - [ENGLISH : preg_replace](https://www.geeksforgeeks.org/php-preg_replace-function/)
 
 #### Video : 
