@@ -1,6 +1,9 @@
 ### Books :
 - [The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws](https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470)
 
+### Articles : 
+- [XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+
 ### Regular Expression Functions in PHP :
 Note: you might need this part when you're working on bypassing trivial regex filters
 #### Articles : 
