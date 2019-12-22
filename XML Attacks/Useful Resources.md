@@ -1,3 +1,6 @@
+## XML
+- [XML Tutorial](https://www.javatpoint.com/xml-tutorial)
+
 ## XXE 
 ### Articles / Papers : 
 - [ENGLISH : XXE Explanation and Exploitation](https://www.exploit-db.com/docs/english/45374-xml-external-entity-injection---explanation-and-exploitation.pdf)
