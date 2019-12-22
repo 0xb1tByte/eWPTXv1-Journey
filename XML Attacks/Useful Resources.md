@@ -1,7 +1,7 @@
 ## XXE 
 ### Articles / Papers : 
-- [ENGLISH : XXE Explanation andExploitation](https://www.exploit-db.com/docs/english/45374-xml-external-entity-injection---explanation-and-exploitation.pdf)
-- [ENGLISH : A PRACTICAL GUIDE TOXXE ATTACK](http://synradar.com/documents/XXE_Attack_Guide.pdf)
+- [ENGLISH : XXE Explanation and Exploitation](https://www.exploit-db.com/docs/english/45374-xml-external-entity-injection---explanation-and-exploitation.pdf)
+- [ENGLISH : A PRACTICAL GUIDE TO XXE ATTACK](http://synradar.com/documents/XXE_Attack_Guide.pdf)
 
 
 ## XPath
