@@ -16,3 +16,12 @@
 ### Articles / Papers : 
 - [ENGLISH : Hacking XPath 2.0 ](https://media.blackhat.com/bh-eu-12/Siddharth/bh-eu-12-Siddharth-Xpath-WP.pdf)
 - [ENGLISH : BLIND XPATH INJECTION ](http://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Blind%20Xpath%20injection.pdf)
+
+## Tools : 
+- [MaraDNS](https://maradns.samiam.org/download.html)
+- [xxeserve](https://github.com/joernchen/xxeserve)
+- [xcat](https://github.com/orf/xcat)
+
+## Labs : 
+- [xxelab](https://github.com/jbarone/xxelab)
+
