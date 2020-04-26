@@ -3,6 +3,7 @@
 
 ### Articles : 
 - [XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+- [HTML5 Security Cheatsheet](https://html5sec.org/)
 
 ### Regular Expression Functions in PHP :
 Note: you might need this part when you're working on bypassing trivial regex filters
