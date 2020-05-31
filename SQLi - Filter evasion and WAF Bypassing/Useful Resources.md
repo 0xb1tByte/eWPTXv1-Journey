@@ -1,5 +1,17 @@
-### Articles/Papers :
+### Articles / Papers / Slides:
 - [ENGLISH : MySQL Out-of-Band Hacking ](https://www.exploit-db.com/docs/english/41273-mysql-out-of-band-hacking.pdf)
 - [ENGLISH : Out-of-Band (OOB) SQL Injection ](https://medium.com/bugbountywriteup/out-of-band-oob-sql-injection-87b7c666548b)
 - [ENGLISH : Out of Band Exploitation (OOB) CheatSheet ](https://www.notsosecure.com/oob-exploitation-cheatsheet/)
+- [SQL Injection Cheat Sheet](https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/#MySQLIf)
+- [The SQL Injection Knowledge Base](https://www.websec.ca/kb/sql_injection)
+- [MySQL Out-of-Band Hacking](https://osandamalith.com/2017/02/03/mysql-out-of-band-hacking/)
+- [METHODS OF QUICK EXPLOITATION OF BLIND SQL INJECTION](https://www.ptsecurity.com/upload/corporate/ww-en/download/PT-devteev-FAST-blind-SQL-Injection.pdf)
+- [Shell Upload, SQL Injection](http://www.lifeoverpentest.com/2017/04/shell-upload-sql-injection.html)
+- [FROM SQL INJECTION TO SHELL](http://index-of.co.uk/Webshell/from_sqli_to_shell.pdf)
+- [Error Based Injection using UpdateXML](http://www.securityidiots.com/Web-Pentest/SQL-Injection/XPATH-Error-Based-Injection-UpdateXML.html)
+- [Injection in Insert, Update and Delete Statements](https://osandamalith.com/2014/04/26/injection-in-insert-update-and-delete-statements/)
+- [Note for SQLi](https://www.hazzel.cn/2018/03/27/note-for-sqli/)
+- [SQLi](https://phonexicum.github.io/infosec/sql-injection.html)
+- [MySQL SQL Injection Practical Cheat Sheet](https://perspectiverisk.com/2013/03/25/mysql-sql-injection-practical-cheat-sheet/)
+- [MySQL Error Based SQL Injection Using EXP](https://www.exploit-db.com/docs/english/37953-mysql-error-based-sql-injection-using-exp.pdf)
 
